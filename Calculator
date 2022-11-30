@@ -1,0 +1,48 @@
+import java.io.*;
+public class calculator
+{
+    public static void main(String args[])throws IOException
+    {
+        BufferedReader br= new BufferedReader(new InputStreamReader(System.in));
+        int choice;
+        System.out.println(" CALCULATOR ");
+        System.out.println("Enter 1 for Addition : ");
+        System.out.println("Enter 2 for Subtraction : ");
+        System.out.println("Enter 3 for Multiplication : ");
+        System.out.println("Enter 4 for Division : ");
+        choice=Integer.parseInt(br.readLine());
+        switch(choice)
+        {
+            case 1:
+                System.out.println("Enter the two numbers you want to Add : ");
+                int num1=Integer.parseInt(br.readLine());
+                int num2=Integer.parseInt(br.readLine());
+                int sum=num1+num2;
+                System.out.println("Addition of two numbers = " + sum);
+                break;
+            case 2:
+                System.out.println("Enter the two numbers you want to Subtract : ");
+                int num3=Integer.parseInt(br.readLine());
+                int num4=Integer.parseInt(br.readLine());
+                int sub=num3-num4;
+                System.out.println("Subtraction of two numbers = " + sub);
+                break;
+            case 3:
+                System.out.println("Enter the two numbers you want to Multiply : ");
+                int num5=Integer.parseInt(br.readLine());
+                int num6=Integer.parseInt(br.readLine());
+                int multiply=num5*num6;
+                System.out.println("Multiplication of two numbers = " + multiply);
+                break;
+            case 4:
+                System.out.println("Enter the two numbers you want to Divide : ");
+                int num7=Integer.parseInt(br.readLine());
+                int num8=Integer.parseInt(br.readLine());
+                int divide=num7/num8;
+                System.out.println("Division of two numbers = " + divide);
+                break;
+            default:
+                System.out.println("Wrong Choice..! ");
+        }
+    }
+}
